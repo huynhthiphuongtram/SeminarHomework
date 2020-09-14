@@ -1,0 +1,264 @@
+/*Đổi phông chữ toàn trang*/
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*Thanh menu*/
+nav {
+    background-color: #002a32;
+    position: fixed;    /*Cố định thanh menu*/
+    z-index: 10;     /*Khi đưa hình ảnh ở dưới vào có hiện tượng ảnh chèn luôn thanh menu => Thêm thuộc tính này để thanh menu nằm chồng lên*/
+    width: 100%;
+    height: 55px;
+    top: 0;
+    left: 0;
+}
+ul.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    float: left;
+}
+ul.menu > li {
+    min-width: 180px;
+    text-align: center;
+}
+ul.menu > li > a {
+    text-decoration: none;
+    display: block;
+    padding: 15px 20px;
+    color: lightgreen;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+}
+ul.menu > li > a:hover {
+    color: white;
+}
+div.search {
+    width: 30%;
+    float: right;
+    padding: 12px 20px;
+    color: lightgreen;
+}
+div.search > input {
+    width: 90%;
+    border-bottom-style: solid;
+    border-width: 0 0 5px 0;
+    border-bottom-color: lightgreen;
+    background: #002a32;
+    color: white;
+}
+div.search > a {
+    color: lightgreen;
+}
+div.search > a:hover {
+    color: white;
+}
+/*Cài đặt cho Davinci(vị trí, bố cục,...)*/
+#Gototopimg {                     
+    z-index: 10;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+body {
+    background: url(../images/bg_ptn.gif) repeat scroll ;
+}
+
+/*Body*/
+section.body {
+    display: flex;
+}
+.width20 {
+    width: 20%;
+    border-right: 3px solid lightgreen;
+    background-color: #002a32;
+}
+.width20 > ul.chinh {
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+}
+.width20 > ul.chinh > li > img {
+    width: 100%;
+    padding: 20px;
+    background-color: #002a32;
+}
+.width20 > ul.chinh > li > button {
+    background-color: #002a32;
+    color: lightgreen;
+    font-size: 18px ;
+    text-align: left;
+    width: 100%;
+    padding: 18px;
+    border: none;
+    outline: none;
+    border-top-style: solid;
+    border-top-width: 3px;
+    border-top-color: lightgreen;
+}
+.width20 > ul.chinh > li > .danhmuc:hover {
+    color: white;
+}
+.danhmuc:after {                /*Tạo các tam giác đằng trước chữ*/
+    content: "\25B6";
+    color: lightgreen;
+    font-weight: bold;
+    float: left;
+    margin-right: 7px;
+}
+.active:after {                /*Các tam giác thay đổi khi nhấn vào*/
+    content: "\25BC";
+}
+.panel {
+    padding: 0 0 0 45px;        /*Thục các thành phần con vào chút xíu*/
+    background-color: #002a32;
+    max-height: 0;              /*Có cái này để trượt lên trượt xuống khi bấm vào*/
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+.panel > ul > li {
+    height: 30px;
+}
+.panel > ul > li > a {
+    text-decoration: none;
+    color: lightskyblue;
+    display: block;
+    padding: 0 10px;
+}
+.panel > ul > li > a:hover {
+    color: white;
+}
+
+/*Phần danh sách Servants*/
+/*Ex-luck làm*/
+div.right {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.body > .right > h1 {
+    font-weight: 700;
+    padding-left: 10px;
+}
+table.info-table
+{
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    border-spacing: 2px;
+    border-color: black;
+    background:#dedede;
+}
+table.tab_content
+{
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    border-spacing: 2px;
+    border-color: black;
+    background-color: whitesmoke;
+}
+th
+{
+    list-style-type: none;
+    width: 20%;
+}
+tr th
+{
+    border: 1px solid black;
+}
+
+div.anhmeta {
+    margin-top: 30px;
+    width: 100%;
+}
+div.anhmeta > h1 {
+    margin-top: 15px;
+    font-weight: 700;
+    padding-left: 10px;
+}
+div.anhmeta > img {
+    margin-left: 260px;
+}
+div.clipgt {
+    margin-top: 30px;
+    width: 100%;
+}
+div.clipgt > h1 {
+    margin-top: 15px;
+    font-weight: 700;
+    padding-left: 10px;
+}
+div.clipgt > figure.clip {
+    float: left;
+    margin: 0 5px 20px 25px;
+}
+div.clipgt > figure.clip > iframe {
+    border: 3px inset lightgreen;
+}
+div.clipgt > figure.clip > figcaption {
+    color: green;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+}
+
+/*Footer*/
+footer {
+    background-color: #002a32;
+    padding: 10px;
+}
+footer > h1 {
+    text-align: center;
+    margin-top: 20px;       /*Cách top của footer*/
+    margin-bottom: 40px;    /*Cách các thành phần bên dưới*/
+}
+footer > h1 > a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+footer > h1 > a:hover {
+    text-decoration: none;
+}
+div.content {
+    overflow: hidden;
+}
+div.content > div {
+    float: left;
+}
+.width25 {
+    width: 25%;
+}
+.width25 > h4 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+.width25 > ul > li {
+    color: lightgreen;
+}
+.width25 > ul > li > a {
+    text-decoration: none;
+    color: lightgreen;
+}
+.width25 > ul > li > a:hover {
+    color: white;
+}
+.width25 > img {
+    width: 90%;
+}
+.width25 > div > a > img {
+    width: 45%;
+}

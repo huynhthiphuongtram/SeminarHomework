@@ -1,0 +1,244 @@
+/*Đổi phông chữ toàn trang*/
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*Thanh menu*/
+nav {
+    background-color: #002a32;
+    position: fixed;    /*Cố định thanh menu*/
+    z-index: 10;     /*Khi đưa hình ảnh ở dưới vào có hiện tượng ảnh chèn luôn thanh menu => Thêm thuộc tính này để thanh menu nằm chồng lên*/
+    width: 100%;
+    height: 55px;
+    top: 0;
+    left: 0;
+}
+ul.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    float: left;
+}
+ul.menu > li {
+    min-width: 180px;
+    text-align: center;
+}
+ul.menu > li > a {
+    text-decoration: none;
+    display: block;
+    padding: 15px 20px;
+    color: lightgreen;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+}
+ul.menu > li > a:hover {
+    color: white;
+}
+div.search {
+    width: 30%;
+    float: right;
+    padding: 12px 20px;
+    color: lightgreen;
+}
+div.search > input {
+    width: 90%;
+    border-bottom-style: solid;
+    border-width: 0 0 5px 0;
+    border-bottom-color: lightgreen;
+    background: #002a32;
+    color: white;
+}
+div.search > a {
+    color: lightgreen;
+}
+div.search > a:hover {
+    color: white;
+}
+/*Body*/
+body
+{
+    height: 965px;
+    background: url(../images/blur_web_background1.jpg) no-repeat center 55px;
+    background-size: 100%;
+}
+.servant-detail
+{
+    width: 1246px;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+}
+div.image {
+    position: absolute;
+    margin: 90px;
+    left: -300px;
+}
+.servant-detail-box
+{
+    position: absolute;
+    right: 0;
+    top: 87px;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+}
+.servant-detail-box-title
+{
+    color:white;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: right;
+    margin-bottom: 20px;
+}
+.servant-detail-box-skill
+{
+    border: 1px solid white;
+    padding: 5px;
+    color: white;
+}
+div.servant-detail-action {
+    position: absolute;
+    bottom: 68px;
+    left: 350px;
+}
+div.servant-icon
+{
+    padding: 10px 0 20px;
+    display: flex;
+}
+div.servant-icon > div {
+    display: flex;
+    margin-left: -440px;
+    margin-bottom: -20px;
+}
+div.servant-icon
+{
+    position: relative;
+    z-index: 2;
+    width: 142px;
+}
+div.icon > li
+{
+    list-style-type: none;
+    cursor: pointer;
+}
+div.icon >li > button > img
+{
+    display: block;
+    width: 200px;
+    position: relative;
+}
+div.info-wrap
+{
+    background: rgba(29, 125, 163, 0.61);
+    padding: 20px 30px;
+}
+div.name
+{
+    display: flex;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+div.title
+{
+    font-size: 30px;
+    font-weight: bold;
+    width: 452px;
+    height: 44px;
+    line-height: 44px;
+    padding-left: 20px;
+    padding-right: 60px;
+    margin: 10px 0;
+    background: blue no-repeat;
+}
+div.active-skills
+{
+    justify-content: space-around;
+}
+div.passive-skills
+{
+    justify-content: space-around;
+    padding: 20px 0 30px;
+}
+
+div.skill > img
+{
+    cursor: pointer;
+    width: 67.5px;
+}
+div.skill > p
+{
+    display: contents;
+    font-size: 40px;
+}
+div.gif 
+{
+    text-decoration-line: overline;
+}
+div.np-name
+{
+    font-size: 34px;
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 18px;
+}
+div.gif-poster 
+{
+    text-align-last: center;
+}
+
+/*Footer*/
+footer {
+    background-color: #002a32;
+    padding: 10px;
+}
+footer > h1 {
+    text-align: center;
+    margin-top: 20px;       /*Cách top của footer*/
+    margin-bottom: 40px;    /*Cách các thành phần bên dưới*/
+}
+footer > h1 > a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+footer > h1 > a:hover {
+    text-decoration: none;
+}
+div.content {
+    overflow: hidden;
+}
+div.content > div {
+    float: left;
+}
+.width25 {
+    width: 25%;
+}
+.width25 > h4 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+.width25 > ul > li {
+    color: lightgreen;
+}
+.width25 > ul > li > a {
+    text-decoration: none;
+    color: lightgreen;
+}
+.width25 > ul > li > a:hover {
+    color: white;
+}
+.width25 > img {
+    width: 90%;
+}
+.width25 > div > a > img {
+    width: 45%;
+}

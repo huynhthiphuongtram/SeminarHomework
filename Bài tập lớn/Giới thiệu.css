@@ -1,0 +1,357 @@
+/*Đổi phông chữ toàn trang*/
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*Thanh menu*/
+nav {
+    background-color: #002a32;
+    position: fixed;    /*Cố định thanh menu*/
+    z-index: 10;     /*Khi đưa hình ảnh ở dưới vào có hiện tượng ảnh chèn luôn thanh menu => Thêm thuộc tính này để thanh menu nằm chồng lên*/
+    width: 100%;
+    height: 55px;
+    top: 0;
+    left: 0;
+}
+ul.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    float: left;
+}
+ul.menu > li {
+    min-width: 180px;
+    text-align: center;
+}
+ul.menu > li > a {
+    text-decoration: none;
+    display: block;
+    padding: 15px 20px;
+    color: lightgreen;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+}
+ul.menu > li > a:hover {
+    color: white;
+}
+div.search {
+    width: 30%;
+    float: right;
+    padding: 12px 20px;
+    color: lightgreen;
+}
+div.search > input {
+    width: 90%;
+    border-bottom-style: solid;
+    border-width: 0 0 5px 0;
+    border-bottom-color: lightgreen;
+    background: #002a32;
+    color: white;
+}
+div.search > a {
+    color: lightgreen;
+}
+div.search > a:hover {
+    color: white;
+}
+/*Cài đặt cho Davinci(vị trí, bố cục,...)*/
+#Gototopimg {                     
+    z-index: 10;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+body {
+    background: url(images/bg_ptn.gif) repeat scroll ;
+}
+/*Phần mở đầu*/
+.modau {
+    background: url(images/bg_movie.jpg) no-repeat center  130px;
+    background-size: 100%;
+}
+.modau > .tth {
+    width: 1120px;
+    margin: 100px auto auto auto;
+    padding: 40px 0 40px 0;
+}
+.modau > .tth > .video {
+    float: left;
+}
+.modau > .video {
+    width: 540px;
+    height: 303px;
+    position: relative;
+}
+.modau .video iframe {
+    width: 540px;
+    height: 303px;
+    border: 3px outset lightgreen;
+} 
+.modau > .clearfix {
+    overflow: auto;
+}
+.modau .tth .md {
+    float: left;
+}
+.modau .md #phu {
+    padding-top: 35px;
+}
+.modau .md .phu {
+    margin-bottom: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 1000;
+    font-style: italic;
+    font-size: 18px;
+}
+.modau .md .chinh {
+    margin-bottom: 0;
+    margin-left: 43px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 22px;
+    color: white;
+}
+.modau .md .dacbiet {
+    text-align: right;
+}
+
+/*Giới thiệu nhân vật*/
+section.nhanvat {
+    overflow: hidden;
+    margin-top: 100px;
+    background: url(images/bg_logo.png) no-repeat  250px 100px;
+}
+section.nhanvat > div.nv {
+    width: 50%;
+    float: left;
+    padding-top: 50px;
+}
+section.nhanvat > div.nv > div > img {
+    width: 20%;
+}
+section.nhanvat > div.nv > div > img#dau {
+    margin-left: 450px;
+}
+section.nhanvat > div.nv > h2 {               /* !!! Chỗ này ko để "width: max-content;" đc vì nếu để thì chữ sẽ ko thụt sang bên phải*/
+    font-weight: 700;
+    text-align: right;
+    background-image: linear-gradient(to right, lightblue, lightgreen);
+}
+section.nhanvat > div.nv > h2#sau {
+    margin: 0 0 0 380px;
+}
+section.nhanvat > div.anh {
+    width: 50%;
+    float: left;
+}
+section.nhanvat > div.anh > img {
+    width: 100%;
+    padding: 0 200px 0 0;
+}
+
+/*Giới thiệu class*/
+section.class {
+    position: relative;
+    margin-top: 100px;
+}
+section > h2 {
+    width: max-content;         /*Cài đặt chiều dài dựa vào nội dung mình nhập*/
+    font-weight: 700;
+    background-image: linear-gradient(to right, lightblue, lightgreen);
+}
+section.class > div.mySlides {
+    width: 100%;
+    overflow: hidden;
+    background: url(images/shielder.png) no-repeat center 500px;
+    display: none;
+}
+section.class > div.mySlides > div.anhclass {
+    width: 50%;
+    float: left;
+}
+section.class > div.mySlides > div.anhclass > img {
+    width: 100%;
+    padding: 5% 10% 0 20%;
+}
+section.class > div.mySlides > div.thongtinclass {
+    width: 50%;
+    float: left;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+section.class > div.mySlides > div.thongtinclass > h1 {
+    padding-top: 20%;
+    font-weight: 700;
+}
+section.class > div.mySlides > div.thongtinclass > p {
+    width: 60%;
+}
+section.class > div.mySlides > div.thongtinclass > img {
+    margin: 100px 0 0 0;
+    width: 25%;
+}
+.mo {
+    cursor: pointer;
+}
+.pr,.ne {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+}
+section.class > a.pr {
+    color: black
+}
+section.class > a.ne {                               /*Cho nút kế tiếp ở bên phải*/
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    color: black
+}
+.column {                           /*Cho các icon class nổi lên để các icon khác phía sau đứng bên cạnh*/
+    float: left;
+    width: 7.6%;
+}
+.demo {                             /*Thêm hiệu ứng trong suốt ở các hình thu nhỏ khi không chọn*/
+    opacity: 0.6;
+}
+.active,.demo:hover {               /*Làm đậm các hình thu nhỏ khi bấm vào*/
+    opacity: 1;
+}
+section.class > a.pr:hover {               /*Khi rê chuột vào, có màu nền và dấu mũi tên đổi thành màu trắng*/
+    background-color: #002a32;
+    color: white;
+}
+section.class > a.ne:hover {               /*Khi rê chuột vào, có màu nền và dấu mũi tên đổi thành màu trắng*/
+    background-color: #002a32;
+    color: white;
+}
+
+/*Giới thiệu gameplay*/
+section.gameplay {
+    margin-top: 100px;
+}
+section.gameplay > h2 {
+    width: max-content;         /*Cài đặt chiều dài dựa vào nội dung mình nhập*/
+    font-weight: 700;
+    background-image: linear-gradient(to right, lightblue, lightgreen);
+}
+section.gameplay > img {
+    width: 25%;
+    border-style: inset;
+    border-color: lightgreen;
+}
+section.gameplay > img#thunhat {
+    margin-left: 12.5%;
+}
+section.gameplay > div {
+    text-align: center;
+    background-color: #002a32;
+    margin: 40px 44% 40px 44%;
+}
+section.gameplay > div > a {
+    color: lightgreen;
+    font-size: 33px;
+}
+section.gameplay > div > a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+/*Giới thiệu series*/
+section.cacphan {
+    margin-top: 50px;
+}
+section.cacphan > h1 {
+    text-align: center;
+    font-weight: 700;
+}
+section.cacphan > div.duan > h3 {
+    color: green;
+}
+section.cacphan > div.duan > div > img {
+    width: 24%;
+    padding: 30px;
+}
+
+/*Phần bonus*/
+section.bonus {
+    margin-top: 50px;
+    clear: both;
+}
+section.bonus > h1 {
+    text-align: center;
+    font-weight: 700;
+}
+section.bonus > div.them {
+    width: 25%;
+    padding: 10px;
+    float: left;    
+}
+.bonus .them figure iframe {
+    border: 3px inset lightgreen;
+}
+section.bonus > div.them > figure > figcaption {
+    color: green;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/*Footer*/
+footer {
+    background-color: #002a32;
+    padding: 10px;
+    clear: left;                /*Ở trên cho mấy cái video nổi làm footer nổi theo nên phải thêm thuộc tính này*/
+}
+footer > h1 {
+    text-align: center;
+    margin-top: 20px;       /*Cách top của footer*/
+    margin-bottom: 40px;    /*Cách các thành phần bên dưới*/
+}
+footer > h1 > a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+footer > h1 > a:hover {
+    text-decoration: none;
+}
+div.content {
+    overflow: hidden;
+}
+div.content > div {
+    float: left;
+}
+.width25 {
+    width: 25%;
+}
+.width25 > h4 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+.width25 > ul > li {
+    color: lightgreen;
+}
+.width25 > ul > li > a {
+    text-decoration: none;
+    color: lightgreen;
+}
+.width25 > ul > li > a:hover {
+    color: white;
+}
+.width25 > img {
+    width: 90%;
+}
+.width25 > div > a > img {
+    width: 45%;
+}

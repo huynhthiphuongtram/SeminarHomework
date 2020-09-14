@@ -1,0 +1,92 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background: url(../images/bg_ptn.gif) repeat scroll;
+}
+/*Phẩn ảnh*/
+div.anh {
+    width: 30%;
+    float: left;
+}
+div.anh > img {
+    width: 100%;
+    position: relative;
+    top: -20px;
+    left: 120px;
+}
+/*Phần đăng nhập*/
+div.main-form {
+    width: 50%;
+    float: left;
+    border: #002a32 solid 1px;
+    margin-top: 60px;
+}
+div.main-form > div.title {
+    height: 160px;
+    background-color: #002a32;
+}
+div.main-form > div.title > h1 {
+    color: lightgreen;
+    text-align: center;
+    margin: 0;
+    padding-top: 40px;
+}
+div.main-form > div.title > h3 {
+    color: white;
+    text-align: center;
+}
+div.main-form > div.form {
+    height: 300px;
+}
+div.main-form > div.form > div.dangnhapkhac {
+    float: left;
+    width: 45%;
+    padding-left: 5%;
+}
+div.main-form > div.form > div.dangnhapkhac > button {
+    width: 75%;
+    height: 35px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+div.main-form > div.form > div.dangnhap {
+    float: left;
+    width: 45%;
+    padding-left: 5%;
+}
+div.main-form > div.form > div.dangnhap > input {
+    width: 75%;
+    height: 30px;
+    margin-bottom: 10px;
+}
+div.main-form > div.form > div.dangnhap > button {
+    width: 77%;
+    height: 35px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: none;
+    border-radius: 3px;
+    background-color: #002a32;
+    color: lightgreen;
+    cursor: pointer;
+}
+div.main-form > div.form > div.dangnhap > button:hover {
+    color: white;
+}
+div.main-form > div.form > div.dangnhap > div.notice > p > a {
+    color: blueviolet;
+}
+div.main-form > div.a > h3 {
+    text-align: right;
+    margin: 0;
+}
+div.main-form > div.a > h3 > a {
+    color: blueviolet;
+    text-decoration: none;
+}
